@@ -75,11 +75,10 @@ def search_and_plot():
 		script, div = components(tsline)
 		stock_fullname = jsVal['dataset']['name']
 		return render_template('plotgraph_page.html',script = script, div = div, stock_fullname = stock_fullname, ticker = ticker)
-		
 	else:
 		return render_template('error_page.html', error_message = error)
 
 
 if __name__ == '__main__':
-	app.run(port=33507)
+	app.run()
 	
