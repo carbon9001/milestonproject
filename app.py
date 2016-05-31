@@ -79,5 +79,7 @@ def search_and_plot():
 	else:
 		return render_template('error_page.html', error_message = error)
 
-app.run()
+
+if __name__ == '__main__':
+	app.run()
 	
