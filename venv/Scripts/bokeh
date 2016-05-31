@@ -1,0 +1,7 @@
+#!D:\learn\dataincubator_12p\submitproject\venv\Scripts\python.exe
+
+import sys
+
+from bokeh.command.bootstrap import main
+
+main(sys.argv)

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>The data incubator mileston project</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--<link rel=stylesheet type=text/css href='/static/style.css'>-->
+		<style type="text/css">
+		body{padding:20px}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Welcome!</h1>
+			<fieldset>	
+				<legend><h2>User Input</h2></legend>
+				<div class="container">
+					<form id='input' method='post' action={{url_for('search_and_plot')}}>
+					<h4>Please enter a stock ticker eg. GOOG, and check desired features.</h4>
+					<p><label>
+						Stock Ticker symbol: <input class="form-control" type='text' name='ticker' placeholder='Stock Ticker'/>
+					</label></p>
+					
+					<div class = "form-inline">
+					<p>
+						Start Date(yyyy-mm-dd)*: <input class="form-control" maxlength='4' type='text' name='start_year' size="4" id='start_year' placeholder='YYYY'/> -- <input class="form-control" maxlength='2' type='text' name='start_month' id='start_month' size="2" placeholder='MM'/> -- <input class="form-control" maxlength='2' type='text' name='start_day' id='start_day' size="2" placeholder='DD'/> (optional)
+					</p>
+					<p>
+						End Date(yyyy-mm-dd)*: <input class="form-control" maxlength='4' type='text' name='end_year' id='end_year' size="4" placeholder='YYYY'/> -- <input class="form-control" maxlength='2' type='text' name='end_month' id='end_month' size="2" placeholder='MM'/> -- <input class="form-control" maxlength='2' type='text' name='end_day' id='end_day' size="2" placeholder='DD'/> (optional)
+					</p>
+					</div>
+					<div class="checkbox">
+					<label>
+						<input type="checkbox" name='features' value='Close' checked='checked'>Closing price<br>
+						<input type="checkbox" name='features' value='Adj. Close'>Adjusted closing price<br>
+						<input type="checkbox" name='features' value='Open'>Opening price<br>
+						<input type="checkbox" name='features' value='Adj. Open'>Adjusted opening price<br>
+					</label>
+						*please at least select one of them!<br><br>
+					</div>
+						<button type="submit" value="Submit" class="btn btn-primary btn-large">Submit</button>
+					</p>
+					</form>
+				</div>
+			</fieldset>
+		</div>
+	</body>
+</html>
